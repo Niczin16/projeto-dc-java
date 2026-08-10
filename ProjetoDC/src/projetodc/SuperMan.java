@@ -9,11 +9,30 @@ package projetodc;
  * @author Aluno
  */
 public class SuperMan extends Heroi{
-    int nivelSuperForca;
+    private int nivelSuperForca;
     
     
-    public void Apresentacao(){
-        System.out.print("Eu sou o " + nome);
+//    public String Especialidade(){
+//        nivelSuperForca = 10000;
+//        
+//        return("Super força: " + String.valueOf(nivelSuperForca));
+//    }
+
+    public int getNivelSuperForca() {
+        return nivelSuperForca;
+    }
+
+    public void setNivelSuperForca(int nivelSuperForca) {
+        this.nivelSuperForca = nivelSuperForca;
+    }
+    
+    public String ApresentarSuperMan(){
+        String valor = apresentarHeroi();
+        
+        return(
+                valor + "\n"
+                + "Nível de super força: " + String.valueOf(nivelSuperForca) + "\n"
+              );
     }
     
 }
